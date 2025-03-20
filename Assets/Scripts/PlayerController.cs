@@ -20,8 +20,8 @@ public class PlayerController : MonoBehaviour
     public float CyoteTimeDuration;
     public float JumpBufferDuration;
 
-    Vector3 characterVelocity;
-    Vector3 slipperyCharacterVelocity;
+    Vector3 velocity;
+    Vector3 slipVelocity;
     bool isGrounded;
     float timeSinceFall;
     bool previouslyGrounded;
@@ -46,16 +46,16 @@ public class PlayerController : MonoBehaviour
     {
         // Stop gravity when on ground
         isGrounded = Physics.CheckSphere(groundCheck.position, groundCheckRadius, groundMask);
-        if (characterVelocity.y < 0 && isGrounded) {
-            characterVelocity.y = -2;
+        if (velocity.y < 0 && isGrounded) {
+            velocity.y = -0.1f;
         }
 
         // Drag on x and z
-        characterVelocity.x *= 0.4f;
-        characterVelocity.z *= 0.4f;
+        velocity.x *= 0.4f;
+        velocity.z *= 0.4f;
 
-        slipperyCharacterVelocity.x *= 0.9f;
-        slipperyCharacterVelocity.z *= 0.9f;
+        slipVelocity.x *= 0.9f;
+        slipVelocity.z *= 0.9f;
 
         // Movement
         float x = Input.GetAxis("Horizontal");
@@ -79,30 +79,30 @@ public class PlayerController : MonoBehaviour
 
         // only activate cyote time if falling or else you can double jump which is no good
         if ((Input.GetButtonDown("Jump") && (isGrounded || 
-            (timeSinceFall <= CyoteTimeDuration && characterVelocity.y < 0)))
+            (timeSinceFall <= CyoteTimeDuration && velocity.y < 0)))
             
             || (JumpBufferTimer < JumpBufferDuration && isGrounded)) {
             
-            characterVelocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         } else {
             // Activate jump buffer timer
             JumpBufferTimer += Time.deltaTime;
         }
 
+        if (Input.GetKey(KeyCode.LeftShift)) {
+            velocity += transform.right * x * speed*8 + transform.forward * z * speed*8;
+            velocity.y = 1; 
+        } else {
+        velocity += transform.right * x * speed + transform.forward * z * speed;
+
+        }
         // XZ movement
-        characterVelocity += transform.right * x * speed + transform.forward * z * speed;
 
         // Gravity
-        characterVelocity.y += gravity * Time.deltaTime;
+        velocity.y += gravity * Time.deltaTime;
         // Move
-        controller.Move(characterVelocity * Time.deltaTime);
-        controller.Move(slipperyCharacterVelocity * Time.deltaTime);
-
-
-        // // Human Fall Flat
-        // if (transform.position.y < -100f) {
-        //     transform.position = new Vector3(-5.5f, 100f, 0);
-        // }
+        controller.Move(velocity * Time.deltaTime);
+        controller.Move(slipVelocity * Time.deltaTime);
     
     }
 }
