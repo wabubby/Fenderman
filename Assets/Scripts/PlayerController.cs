@@ -96,6 +96,11 @@ public class PlayerController : MonoBehaviour
         velocity += transform.right * x * speed + transform.forward * z * speed;
 
         }
+
+        if (Input.GetKey(KeyCode.LeftControl)) {
+            velocity.y = -80;
+        }
+
         // XZ movement
 
         // Gravity
