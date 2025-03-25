@@ -1315,16 +1315,28 @@ PrefabInstance:
       value: Diamond
       objectReference: {fileID: 0}
     - target: {fileID: 7569270725410892495, guid: 1caab97610ef26e499fba29c9c13857f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 19.833956
+      objectReference: {fileID: 0}
+    - target: {fileID: 7569270725410892495, guid: 1caab97610ef26e499fba29c9c13857f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 16.149029
+      objectReference: {fileID: 0}
+    - target: {fileID: 7569270725410892495, guid: 1caab97610ef26e499fba29c9c13857f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.4447293
+      objectReference: {fileID: 0}
+    - target: {fileID: 7569270725410892495, guid: 1caab97610ef26e499fba29c9c13857f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.868011
+      value: -17.8
       objectReference: {fileID: 0}
     - target: {fileID: 7569270725410892495, guid: 1caab97610ef26e499fba29c9c13857f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.1224859
+      value: -124.1
       objectReference: {fileID: 0}
     - target: {fileID: 7569270725410892495, guid: 1caab97610ef26e499fba29c9c13857f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.4671383
+      value: -24.8
       objectReference: {fileID: 0}
     - target: {fileID: 7569270725410892495, guid: 1caab97610ef26e499fba29c9c13857f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1353,6 +1365,10 @@ PrefabInstance:
     - target: {fileID: 7569270725410892495, guid: 1caab97610ef26e499fba29c9c13857f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7569270725410892495, guid: 1caab97610ef26e499fba29c9c13857f, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
