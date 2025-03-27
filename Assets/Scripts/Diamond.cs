@@ -13,4 +13,9 @@ public class Diamond : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+
+    private void Update()
+    {
+
+    }
 }
