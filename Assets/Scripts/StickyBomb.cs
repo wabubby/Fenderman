@@ -53,9 +53,7 @@ public class StickyBomb : MonoBehaviour
         
     }
 
-    void OnCollisionEnter(Collision collision) {
-        // if (collision.gameObject.GetComponent<Projectile>() != null) {
-        //     exploding.Explode();
-        // }
+    public void Explode() {
+        exploding.Explode();
     }
 }

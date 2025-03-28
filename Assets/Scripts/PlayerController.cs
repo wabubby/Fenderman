@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     public float CyoteTimeDuration;
     public float JumpBufferDuration;
 
-    Vector3 velocity;
+    public Vector3 velocity;
     Vector3 slipVelocity;
     bool isGrounded;
     float timeSinceFall;

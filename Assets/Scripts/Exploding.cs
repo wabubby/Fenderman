@@ -20,7 +20,7 @@ public class Exploding : MonoBehaviour
     }
 
     public void Explode() {
-        // Instantiate(explosionPrefab, transform.position, transform.rotation);
+        Instantiate(explosionPrefab, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 
