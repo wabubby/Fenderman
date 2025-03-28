@@ -17,6 +17,7 @@ public class PlayerInventory : MonoBehaviour
     {
         if (NumberOfDiamonds >= scoreGoal)
         {
+            Debug.Log("collected all diamonds");
             UnityEngine.SceneManagement.SceneManager.LoadScene("VictoryScreen");
         }
     }

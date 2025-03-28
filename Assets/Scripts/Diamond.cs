@@ -6,7 +6,7 @@ public class Diamond : MonoBehaviour
     private GameObject diamondPrefab;
     private void OnTriggerEnter(Collider other) 
     {
-        PlayerInventory playerInventory = other.GetComponent<PlayerInventory>(); // check if collison is with char
+        PlayerInventory playerInventory = other.GetComponentInParent<PlayerInventory>(); // check if collison is with char
 
         if (playerInventory != null)
         {
