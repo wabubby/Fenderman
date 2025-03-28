@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6643857016939918601}
   - component: {fileID: 2082704303767161992}
   - component: {fileID: 6272488704133575723}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Bomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f08eec2445b994e458a6ecd5d72f22cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explodeDelay: 5
+  explodeDelay: 2
   explodeOnStick: 0
   sticky: {fileID: 3708385110215967257}
   exploding: {fileID: 6643857016939918601}
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activated: 0
   timeActivated: 0
-  explosionPrefab: {fileID: 0}
+  explosionPrefab: {fileID: 8467313949107486431, guid: e1afcc7292a4cc940beaf519631abbcd, type: 3}
 --- !u!114 &2082704303767161992
 MonoBehaviour:
   m_ObjectHideFlags: 0
