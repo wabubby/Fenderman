@@ -19777,6 +19777,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3268066741011269674, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 4007222961742406983, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
       propertyPath: m_LocalScale.x
       value: 5.38
@@ -19831,6 +19835,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4007222961742406983, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4687680198736304282, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
+      propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7521399750729008553, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
@@ -25756,6 +25764,7 @@ GameObject:
   - component: {fileID: 1843284334}
   - component: {fileID: 1843284333}
   - component: {fileID: 1843284336}
+  - component: {fileID: 1843284337}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -25870,6 +25879,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1843284337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843284331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f81d958269e39f40b6d1c5fbd4269b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  hearts:
+  - {fileID: 1189754380}
+  - {fileID: 1241715136}
+  - {fileID: 705207661}
+  currentHealth: 3
 --- !u!64 &1844848474
 MeshCollider:
   m_ObjectHideFlags: 0

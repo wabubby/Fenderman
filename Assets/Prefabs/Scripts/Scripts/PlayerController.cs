@@ -41,6 +41,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // private void OnTriggerEnter3D(Collider 3D collision) {
+    //     if (collision.tag == "Player")
+    //         var healthComponent = collision.GetComponent(Health>());
+    //         if (healthComponent != null)
+    //             healthComponent.TakeDamage(1);
+    // }
+
 
     void Update()
     {
@@ -110,4 +117,5 @@ public class PlayerController : MonoBehaviour
         controller.Move(slipVelocity * Time.deltaTime);
     
     }
+
 }
