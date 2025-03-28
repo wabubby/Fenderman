@@ -1,11 +1,12 @@
+using System;
 using UnityEngine;
 
 public class Diamond : MonoBehaviour
 {
     [SerializeField]
     private GameObject diamondPrefab;
-    private int count = 0;
 
+    private static int count;
     // Array of predefined spawn positions
     [SerializeField]
     private Vector3[] spawnPositions = new Vector3[]
@@ -25,19 +26,20 @@ public class Diamond : MonoBehaviour
 
         if (playerInventory != null)
         {
-            playerInventory.DiamondCollected();
             gameObject.SetActive(false);
-            Spawn();
+            count ++;
+            playerInventory.DiamondCollected();
+            Spawn(count);
         }
     }
-    private void Spawn()
+    private void Spawn(int count)
     {
         // Increment count and check if within spawn positions array
-        if (count < spawnPositions.Length)
+        if (count <= spawnPositions.Length)
         {
             GameObject clone = Instantiate(diamondPrefab, spawnPositions[count], Quaternion.identity);
             clone.SetActive(true);
-            count++;
+            Debug.Log(count);
         }
     }
 }
