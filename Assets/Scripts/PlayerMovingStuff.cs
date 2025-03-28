@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem.OnScreen;
 
 public class PlayerMovingStuff : MonoBehaviour
 {
@@ -26,9 +27,9 @@ public class PlayerMovingStuff : MonoBehaviour
         // float deltaVelY;
 
     [Header("Slope Handling")]
-        public float maxSlopeAngle = 40;
-        private RaycastHit slopeHit;
-        private bool exitingSlope;
+        float maxSlopeAngle = 40;
+        RaycastHit slopeHit;
+        public bool ExitingSlope;
 
 
 
@@ -40,8 +41,6 @@ public class PlayerMovingStuff : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
-
-        
     }
     
     void Update()
@@ -83,7 +82,7 @@ public class PlayerMovingStuff : MonoBehaviour
         //direction calculation
         moveDirection = orientation.forward * verticalInput + orientation.right *horizontalInput;
 
-        if (SlopeCheck())
+        if (SlopeCheck() && !ExitingSlope)
         {
             rb.AddForce(SlopeDirection() * Movespeed * 20f, ForceMode.Force);
 
@@ -97,19 +96,21 @@ public class PlayerMovingStuff : MonoBehaviour
         else{
             rb.AddForce(moveDirection.normalized * Movespeed * AirMultiplier * 10f, ForceMode.Force);
         }
+
+        rb.useGravity = !SlopeCheck();
     }
 
     void SpeedControl(){
         Vector3 flatVel = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
         Vector3 limitedVel = Vector3.zero;
 
-        if (SlopeCheck())
-        {
+        if (SlopeCheck() && !ExitingSlope){
             if (rb.linearVelocity.magnitude > Movespeed)
                 rb.linearVelocity = rb.linearVelocity.normalized * Movespeed;
         }
+
         else{
-            if(flatVel.magnitude>Movespeed){
+            if(flatVel.magnitude > Movespeed){
                 limitedVel = flatVel.normalized * Movespeed;
                 rb.linearVelocity = new Vector3(limitedVel.x, rb.linearVelocity.y, limitedVel.z);
             }
@@ -118,8 +119,7 @@ public class PlayerMovingStuff : MonoBehaviour
 
     bool SlopeCheck()
     {
-        if(Physics.Raycast(transform.position, Vector3.down, out slopeHit, PlayerHeight * 0.5f + 0.3f))
-        {
+        if(Physics.Raycast(transform.position, Vector3.down, out slopeHit, PlayerHeight * 0.5f + 0.3f)){
             float angle = Vector3.Angle(Vector3.up, slopeHit.normal);
             return angle < maxSlopeAngle && angle != 0;
         }

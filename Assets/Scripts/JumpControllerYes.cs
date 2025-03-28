@@ -36,6 +36,7 @@ public class JumpControllerYes : MonoBehaviour
         isGrounded = player.isGrounded;
         jumpBuffered = false;
         timeSinceLastJumpInput += Time.deltaTime;
+        player.ExitingSlope = false;
 
         if (isGrounded){
             canJump = true;
@@ -62,12 +63,14 @@ public class JumpControllerYes : MonoBehaviour
     {
         AttemptJump();
     }
+
     void AttemptJump(){
         if (canJump && Input.GetKey(KeyCode.Space) && !airborneFromJump){
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
             rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
             airborneFromJump = true;
             canJump = false;
+            player.ExitingSlope = true;
         }
         
 
@@ -76,6 +79,7 @@ public class JumpControllerYes : MonoBehaviour
             rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
             canJump = false;
             jumpBuffered = false;
+            player.ExitingSlope = true;
         }
     }
 }
