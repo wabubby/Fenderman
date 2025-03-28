@@ -2,6 +2,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class PlayerHealth : MonoBehaviour
@@ -22,7 +23,8 @@ public class PlayerHealth : MonoBehaviour
                 currentHealth -= 1;
             }
             if(currentHealth <= 1){
-                Debug.Log("you died");
+                Debug.Log("You died!");
+                SceneManager.LoadScene("LoseScreen");
                 // Switch Scene
                 return;
             }
