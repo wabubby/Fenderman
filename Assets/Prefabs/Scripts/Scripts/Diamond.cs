@@ -4,7 +4,22 @@ public class Diamond : MonoBehaviour
 {
     [SerializeField]
     private GameObject diamondPrefab;
-    private void OnTriggerEnter(Collider other) 
+    private int count = 0;
+
+    // Array of predefined spawn positions
+    [SerializeField]
+    private Vector3[] spawnPositions = new Vector3[]
+    {
+        new Vector3(28, -3, -79),
+        new Vector3(-145, -3, -57),
+        new Vector3(-160, -5, -125),
+        new Vector3(-55, 0, 30),
+        new Vector3(-89, -4, -44),
+        new Vector3(-75, 2, 33),
+        new Vector3(-178, -3, 37)
+    };
+
+    private void OnTriggerEnter(Collider other)
     {
         PlayerInventory playerInventory = other.GetComponentInParent<PlayerInventory>(); // check if collison is with char
 
@@ -15,37 +30,14 @@ public class Diamond : MonoBehaviour
             Spawn();
         }
     }
-
-    private void Update()
-    {
-        //if (gameObject == false)
-        //{
-        //    Spawn();
-        //}
-
-    }
-
     private void Spawn()
     {
-        Vector3 randomSpawnPosition = new Vector3(Random.Range(-10, -50), -124, Random.Range(-20, -28));
-        GameObject clone = Instantiate(diamondPrefab, randomSpawnPosition, Quaternion.identity);
-        clone.SetActive(true);
+        // Increment count and check if within spawn positions array
+        if (count < spawnPositions.Length)
+        {
+            GameObject clone = Instantiate(diamondPrefab, spawnPositions[count], Quaternion.identity);
+            clone.SetActive(true);
+            count++;
+        }
     }
-
-    //private void DiamondView(int amount)
-    //{
-    //    if (amount == 0)
-    //    {
-    //        diamondView = 0;
-    //    }
-    //}
-
-    //private bool ShouldSpawn()
-    //{
-    //    if (diamondView == 0)
-    //    {
-    //        return true;
-    //    }
-    //    return false;
-    //}
 }
