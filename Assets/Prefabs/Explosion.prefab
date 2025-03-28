@@ -9709,9 +9709,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8467313949107486431}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35a64e97c25edfd4cbaf19fddcb67e71, type: 3}
+  m_Script: {fileID: 11500000, guid: fda095169fedb3d45b9a087c794d7ac9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   LifeTime: 5
-  Force: 1000
-  Radius: 8
+  Force: 3
+  Radius: 3
