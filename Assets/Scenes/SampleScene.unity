@@ -19757,6 +19757,91 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4254080454219672292, guid: ee4aefdc6b73b4b4da5519611350ca58, type: 3}
+--- !u!1001 &1175078780
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 985015140261849258, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 985015140261849258, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 3268066741011269674, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
+      propertyPath: m_Name
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007222961742406983, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007222961742406983, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007222961742406983, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007222961742406983, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007222961742406983, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007222961742406983, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007222961742406983, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007222961742406983, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007222961742406983, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007222961742406983, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007222961742406983, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007222961742406983, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007222961742406983, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007222961742406983, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7521399750729008553, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
 --- !u!64 &1175750694
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -28225,3 +28310,4 @@ SceneRoots:
   - {fileID: 1843284332}
   - {fileID: 489552904}
   - {fileID: 1987337238}
+  - {fileID: 1175078780}
