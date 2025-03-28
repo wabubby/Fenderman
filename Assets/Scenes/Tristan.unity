@@ -2781,6 +2781,7 @@ MonoBehaviour:
     m_Bits: 8
   CyoteTimeDuration: 0.1
   JumpBufferDuration: 0.2
+  velocity: {x: 0, y: 0, z: 0}
 --- !u!143 &689134351
 CharacterController:
   m_ObjectHideFlags: 0
@@ -9256,7 +9257,6 @@ GameObject:
   - component: {fileID: 2098077461}
   - component: {fileID: 2098077465}
   - component: {fileID: 2098077464}
-  - component: {fileID: 2098077463}
   - component: {fileID: 2098077462}
   m_Layer: 4
   m_Name: '"Gun"'
@@ -9295,27 +9295,11 @@ MonoBehaviour:
   bombPrefab: {fileID: 2825081834139898169, guid: 8f4cdb07b4e03d14ebd90279ded042f0, type: 3}
   throwVelocity: 10
   carryPlayerSpeed: 1
---- !u!65 &2098077463
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2098077460}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  FireMode: 0
+  HitEffectPrefab: {fileID: 8467313949107486431, guid: e1afcc7292a4cc940beaf519631abbcd, type: 3}
+  BulletTrailPrefab: {fileID: 5738375577245274877, guid: d020a39b31862234481d180f4ffa9edd, type: 3}
+  LastShootTime: 0
+  player: {fileID: 689134350}
 --- !u!23 &2098077464
 MeshRenderer:
   m_ObjectHideFlags: 0
