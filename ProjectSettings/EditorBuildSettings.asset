@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ryan.unity
     guid: 564b26b5e303f8e45b384ec28ee8b068
+  - enabled: 1
+    path: Assets/Scenes/VictoryScreen.unity
+    guid: 9db98202ef613584e8647d619c756c62
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
