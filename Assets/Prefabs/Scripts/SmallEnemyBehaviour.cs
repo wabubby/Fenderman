@@ -1,7 +1,9 @@
 using Unity.Mathematics;
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
-public class EnemyBehavoir : MonoBehaviour
+public class SmallEnemyBehaviour : MonoBehaviour
 {
     public CharacterController controller;
     public float speed = 5f;
@@ -13,7 +15,7 @@ public class EnemyBehavoir : MonoBehaviour
     bool OnGround;
     bool TouchingPlayer;
     quaternion FourNum;
-    Rigidbody rigidbody;
+    new Rigidbody rigidbody;
     
     void Start() {
         Player = GameObject.Find("Player");
@@ -32,6 +34,11 @@ public class EnemyBehavoir : MonoBehaviour
         // transform.LookAt(Player.transform);
         if(distanceToPlayer > 2 && OnGround) {
             rigidbody.MovePosition(transform.position + playerDirection * speed * Time.deltaTime);
+        }
+
+        if(TouchingPlayer){
+            Player.GetComponent<PlayerHealth>().TakeDamage();
+            DestroyImmediate(gameObject);
         }
 
         if(Input.GetKeyDown(KeyCode.LeftControl)) {

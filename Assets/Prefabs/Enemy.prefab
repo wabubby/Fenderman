@@ -120,11 +120,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3268066741011269674}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7c6bf4f915cc7448a34eb0561f2edac, type: 3}
+  m_Script: {fileID: 11500000, guid: 553b6b3237cb387448a143809f5fe55c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
-  speed: 20
+  speed: 5
   groundMask:
     serializedVersion: 2
     m_Bits: 8

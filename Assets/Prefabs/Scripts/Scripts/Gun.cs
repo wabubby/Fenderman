@@ -39,7 +39,7 @@ public class Gun : MonoBehaviour
         if (hit) {
             if (hitInfo.collider.gameObject.TryGetComponent(out StickyBomb bomb)) {
                 bomb.Explode();
-            } else if (hitInfo.collider.gameObject.TryGetComponent(out EnemyBehavoir enemy)) {
+            } else if (hitInfo.collider.gameObject.TryGetComponent(out SmallEnemyBehaviour enemy)) {
                 // put your health down thing here
             }
 
