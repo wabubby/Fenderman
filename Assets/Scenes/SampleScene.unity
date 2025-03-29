@@ -3995,7 +3995,7 @@ GameObject:
   - component: {fileID: 441117380}
   - component: {fileID: 441117379}
   - component: {fileID: 441117378}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Player Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4322,7 +4322,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 485849584}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Orientation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19686,27 +19686,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4007222961742406983, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
       propertyPath: m_LocalScale.x
-      value: 5.38
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4007222961742406983, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
       propertyPath: m_LocalScale.y
-      value: 5.38
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4007222961742406983, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
       propertyPath: m_LocalScale.z
-      value: 5.38
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4007222961742406983, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.13
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4007222961742406983, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.56
+      value: -0.44000006
       objectReference: {fileID: 0}
     - target: {fileID: 4007222961742406983, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 13.38
       objectReference: {fileID: 0}
     - target: {fileID: 4007222961742406983, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
       propertyPath: m_LocalRotation.w
@@ -19742,7 +19742,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4687680198736304282, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7521399750729008553, guid: 8a50074a8168a264ab2e09237513ad48, type: 3}
       propertyPath: speed
@@ -21650,7 +21650,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1378918605}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Camera Postion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25668,7 +25668,7 @@ GameObject:
   - component: {fileID: 1843284333}
   - component: {fileID: 1843284336}
   - component: {fileID: 1843284337}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25794,12 +25794,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f81d958269e39f40b6d1c5fbd4269b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
   hearts:
   - {fileID: 1189754380}
   - {fileID: 1241715136}
   - {fileID: 705207661}
-  currentHealth: 3
 --- !u!64 &1844848474
 MeshCollider:
   m_ObjectHideFlags: 0

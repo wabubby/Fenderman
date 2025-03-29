@@ -1,5 +1,3 @@
-using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -14,7 +12,7 @@ public class SmallEnemyBehaviour : MonoBehaviour
     Vector3 NewEnemyPos;
     bool OnGround;
     bool TouchingPlayer;
-    quaternion FourNum;
+    Quaternion FourNum;
     new Rigidbody rigidbody;
     
     void Start() {
@@ -29,7 +27,7 @@ public class SmallEnemyBehaviour : MonoBehaviour
         float distanceToPlayer = playerVector.magnitude;
 
         OnGround = Physics.CheckSphere(transform.position, .5f, groundMask);
-        TouchingPlayer = Physics.CheckSphere(transform.position, 0.6f, playerMask);
+        TouchingPlayer = Physics.CheckSphere(transform.position, transform.localScale.x * 0.5f + 0.02f, playerMask);
 
         // transform.LookAt(Player.transform);
         if(distanceToPlayer > 2 && OnGround) {
@@ -42,9 +40,9 @@ public class SmallEnemyBehaviour : MonoBehaviour
         }
 
         if(Input.GetKeyDown(KeyCode.LeftControl)) {
-            NewEnemyPos.x = UnityEngine.Random.Range(-100f, 100f);
+            NewEnemyPos.x = Random.Range(-100f, 100f);
             NewEnemyPos.y = -20;
-            NewEnemyPos.z = UnityEngine.Random.Range(-100f, 100f);
+            NewEnemyPos.z = Random.Range(-100f, 100f);
             transform.position = NewEnemyPos;
             transform.rotation = FourNum;
         }

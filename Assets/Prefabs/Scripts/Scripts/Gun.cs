@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Gun : MonoBehaviour
@@ -39,9 +38,10 @@ public class Gun : MonoBehaviour
         if (hit) {
             if (hitInfo.collider.gameObject.TryGetComponent(out StickyBomb bomb)) {
                 bomb.Explode();
-            } else if (hitInfo.collider.gameObject.TryGetComponent(out SmallEnemyBehaviour enemy)) {
-                // put your health down thing here
-            }
+            } 
+            // else if (hitInfo.collider.gameObject.TryGetComponent(out SmallEnemyBehaviour enemy)) {
+            //     // put your health down thing here
+            // }
 
             // HIT EFFECTS 
             Instantiate(HitEffectPrefab, hitInfo.point, transform.rotation);
