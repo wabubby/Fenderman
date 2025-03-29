@@ -13,11 +13,12 @@ public class Diamond : MonoBehaviour
     {
         new Vector3(28, -3, -79),
         new Vector3(-145, -3, -57),
+        new Vector3(-64, -1, -14),
         new Vector3(-160, -5, -125),
         new Vector3(-55, 0, 30),
         new Vector3(-89, -4, -44),
         new Vector3(-75, 2, 33),
-        new Vector3(-178, -3, 37)
+        new Vector3(-178, -3, 37),
     };
 
     private void OnTriggerEnter(Collider other)
@@ -27,9 +28,9 @@ public class Diamond : MonoBehaviour
         if (playerInventory != null)
         {
             gameObject.SetActive(false);
-            count ++;
             playerInventory.DiamondCollected();
             Spawn(count);
+            count ++;
         }
     }
     private void Spawn(int count)
