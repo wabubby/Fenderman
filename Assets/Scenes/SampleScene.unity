@@ -6734,6 +6734,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Diamond
       objectReference: {fileID: 0}
+    - target: {fileID: 6519517486948040895, guid: 1caab97610ef26e499fba29c9c13857f, type: 3}
+      propertyPath: m_TagString
+      value: Rotate
+      objectReference: {fileID: 0}
     - target: {fileID: 7569270725410892495, guid: 1caab97610ef26e499fba29c9c13857f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -55.84
@@ -6777,7 +6781,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6519517486948040895, guid: 1caab97610ef26e499fba29c9c13857f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1757599975}
   m_SourcePrefab: {fileID: 100100000, guid: 1caab97610ef26e499fba29c9c13857f, type: 3}
 --- !u!64 &726417306
 MeshCollider:
@@ -25060,6 +25067,23 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5763887459567496512, guid: ee4aefdc6b73b4b4da5519611350ca58, type: 3}
+--- !u!1 &1757599971 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6519517486948040895, guid: 1caab97610ef26e499fba29c9c13857f, type: 3}
+  m_PrefabInstance: {fileID: 722656975}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1757599975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757599971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9642e9ab31d884a409ba9fbda04f7662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!64 &1759211964
 MeshCollider:
   m_ObjectHideFlags: 0
